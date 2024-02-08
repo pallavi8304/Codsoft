@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .background-image {
+            background-image: url('https://images.squarespace-cdn.com/content/5134cbefe4b0c6fb04df8065/1637777041160-YGZRRJYX5P2KXW4L7Y02/image-asset.jpeg?content-type=image%2Fjpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #f6efef;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        nav {
+            color: #fff;
+            text-align: left;
+            padding: 15px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 22px; 
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            overflow: auto; 
+            max-height: 70vh; 
+        }
+
+        .menu-item {
+            margin: 15px;
+        }
+
+        .menu-item h3 {
+            margin-top: 10px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .content {
+            z-index: 1;
+        }
+
+        .contact-section {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+        .content h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            margin-top: -20px; 
+        }
+        .social-icons {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #f6f4f4;
+            margin: 0 20px;
+            font-size: 30px;
+        }
+        .location {
+            display: flex;
+            align-items: left;
+            margin-right: 19px; 
+        }
+
+        .location i {
+            font-size: 30px;
+            margin-right: 8px;
+        }
+
+        .copyright {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #fef8f8;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="scrollToTop()">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="background-image">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Welcome to Sway </h1>
+            <p><h3>Experience flavors that delight your senses and create lasting memories.</h3></p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/_pallavi__.08?igsh=ODFndzNodmZlbzJh" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Pune, Maharashtra</span>
+            </div>
+        </div>
+    </div>
+ 
+    <div id="menu" class="menu"> 
+        <div class="menu-item">
+            <h2>Pizza</h2>
+            <img src="https://images.ctfassets.net/nw5k25xfqsik/64VwvKFqxMWQORE10Tn8pY/200c0538099dc4d1cf62fd07ce59c2af/20220211142754-margherita-9920.jpg" alt="Margherita Pizza Image" width="300" height="200">
+            <h3>Pizza Margherita</h3>
+            <p>Classic pizza with tomato, mozzarella, and basil.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.cremeux.in/wp-content/uploads/2023/07/TOMATO-FRESH-VEGGIE-2.jpg" alt="Quick Tomato Pizzas Image" width="300" height="200">
+            <h3>Quick Tomato Pizzas</h3>
+            <p>Fast and delicious pizzas with fresh tomatoes.</p>
+        </div>
+        
+        <div class="menu-item">
+            <h2>Burgers</h2>
+            <img src="https://www.sawadindiaka.in/wp-content/uploads/2021/05/7132f972-c0ac-400a-afa3-6e811c93bd48-1.jpg" alt="Paneer and Green Peas Burger Image" width="300" height="200">
+            <h3>Paneer and Green Peas Burger</h3>
+            <p>Delicious burger with paneer and green peas.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://wildflourskitchen.com/wp-content/uploads/2017/04/pizza-burger-bowl-4.png.webp" alt="Pizza Burger Bowl Image" width="300" height="200">
+            <h3>Pizza Burger Bowl</h3>
+            <p>Enjoy the goodness of a pizza in a burger bowl.</p>
+        </div>
+        
+        <p><a href="#" onclick="scrollToTop()">Back to Home</a></p>
+    </div>
+
+    <div id="about" class="menu"> 
+        <div class="menu-item">
+            <h2>About Us</h2>
+            <p>Welcome to Sway, where we strive to create a memorable dining experience for our customers. Our restaurant has been serving delicious and high-quality meals for 3 years.</p>
+            <p>At our, we are passionate about using fresh and locally sourced ingredients to create mouthwatering dishes. Our chefs are dedicated to bringing you a diverse menu that caters to various tastes and preferences.</p>
+            <p>Whether you're looking for a casual meal with friends or a special dining experience for a celebration, we aim to provide excellent service in a warm and inviting atmosphere.</p>
+            <p>Thank you for choosing Sway. We look forward to serving you and making your dining experience truly delightful.</p>
+            <p><a href="#" onclick="scrollToTop()">Back to Home</a></p>
+        </div>
+    </div>
+
+    <div id="contact" class="menu"> 
+        <div class="menu-item">
+            <h2>Contact Us</h2>
+            <p>For inquiries or reservations, please reach out to us:</p>
+            <p>Email: swaycafe@gmail.com</p>
+            <p>Phone: 1234569876</p>
+            <p><a href="#" onclick="scrollToTop()">Back to Home</a></p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© 2024 Sway Restaurant Group. All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/_pallavi__.08?igsh=ODFndzNodmZlbzJh" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <script>
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function scrollToSection(targetId) {
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                if (targetId === 'home') {
+                    scrollToTop();
+                } else {
+                    scrollToSection(targetId);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
